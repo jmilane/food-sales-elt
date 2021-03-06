@@ -32,7 +32,7 @@ try:
                                dbname=pg_config['db'])
     pg_cursor = pg_conn.cursor()
 
-    f = open('NationalTotalAndSubcategory.csv', 'r')
+    f = open(config['src']['path'], 'r')
 
     pg_cursor.execute('truncate table national_total_and_subcategory')
     staged_records = []
