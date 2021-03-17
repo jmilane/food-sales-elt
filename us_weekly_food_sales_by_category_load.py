@@ -6,7 +6,7 @@ from datetime import datetime
 from weekly_food_sales_utilities import insert_table_batch
 
 logging.basicConfig(
-    filename='logs/us_weekly_food_sales_load_{}.log'.format(datetime.now().strftime("%Y-%m-%dT%H.%M.%S")),
+    filename='logs/us_weekly_food_sales_by_category_load_{}.log'.format(datetime.now().strftime("%Y-%m-%dT%H.%M.%S")),
     format='%(asctime)s %(levelname)-8s %(message)s',
     level=logging.INFO,
     datefmt='%Y-%m-%d %H:%M:%S')
