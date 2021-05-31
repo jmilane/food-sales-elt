@@ -12,5 +12,5 @@ def insert_table_batch(pg_cursor, table_name, data):
 
 
 def parse_date(src_str):
-    date_parts = src_str.split('/')
-    return'{}-{}-{}'.format(date_parts[2], date_parts[0], date_parts[1])
+    date_parts = src_str.split('-')
+    return'{}-{}-{}'.format(date_parts[0], date_parts[1], date_parts[2])
