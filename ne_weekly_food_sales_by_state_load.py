@@ -16,8 +16,8 @@ def ne_weekly_food_sales_by_state_load(config, pg_conn, pg_cursor):
                 parse_date(src_record['Date']),
                 src_record['State'],
                 src_record['Category'],
-                src_record['Variable'],
-                src_record['Value']
+                src_record['variable'],
+                None if 'NA' == src_record['value'] else src_record['value']
             )
         )
         # add records in batches of 1000
