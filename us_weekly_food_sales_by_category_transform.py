@@ -11,7 +11,7 @@ def us_weekly_food_sales_by_category_transform(config, pg_cursor):
                          category,
                          sum(value)
                          from national_total_and_subcategory
-                         where category <> 'All Foods'
+                         where upper(category) <> 'ALL FOODS'
                          and variable = 'Dollars'
                          group by
                          date,
