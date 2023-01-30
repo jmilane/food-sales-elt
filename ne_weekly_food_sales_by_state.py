@@ -26,7 +26,7 @@ try:
                                port=pg_config['port'],
                                dbname=pg_config['db'])
     pg_cursor = pg_conn.cursor()
-    # ne_weekly_food_sales_by_state_load(config, pg_conn, pg_cursor)
+    ne_weekly_food_sales_by_state_load(config, pg_conn, pg_cursor)
     ne_weekly_food_sales_by_state_transform(config, pg_cursor)
 
 except Exception as e:
